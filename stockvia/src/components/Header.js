@@ -21,33 +21,30 @@ export default function Header(){
  <div class="collapse navbar-collapse justify-content-center align-items-end m-auto mb-0" id="Navbar">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-      <Link className ="nav-link" to="/recos">Recommondations</Link>
+      <Link className ="nav-link" to="/recos">Recommendations</Link>
       </li>
       
-      <li class="nav-item">
-        <Link className ="nav-link " to="/news">News</Link>
-
-      </li>
       <li class="nav-item">
      
         <Link className ="nav-link " to="/learn">Learn <span class="badge bg-info">New</span></Link>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Corporate Actions
+          More
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <Link class="dropdown-item" to="/mutual-funds">Mutual Funds</Link>
+          <a class="dropdown-item" href="#">ETF's</a>
+          <a class="dropdown-item" href="#">Digi Gold/SGB</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Crypto</a>
         </div>
       </li>
       
     </ul>
-
-    <a href="#" data-scroll-nav="1" class="earn-btn">Earn with Us</a>
-    
+    <Link class="earn-btn" data-scroll-nav="1" to="/premium">Premium</Link>
+    {/* <a href="#" data-scroll-nav="1" class="earn-btn">Earn with Us</a>
+     */}
   </div>
 
   

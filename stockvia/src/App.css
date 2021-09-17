@@ -107,11 +107,11 @@ body{
 }
 
 .hero-col{
-  
   border-radius: 2rem;
   background-color: #fbfbfb;
   margin: 10px;
 }
+
 .hero-row{
  
     margin: 0 auto;
@@ -119,8 +119,11 @@ body{
     min-height: 250px;
    
 }
-
-.dividend-col{
+.stock-col a{
+  text-decoration: none;
+  color: rgb(0, 82, 73)!important;
+}
+.stock-col{
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     background-image: none;
     overflow: hidden;
@@ -134,8 +137,11 @@ body{
     background-color: rgb(200, 250, 205);
 }
 
-.bonus-col{
-
+.dividend-col a{
+  text-decoration: none;
+  color: rgb(122, 12, 46);
+}
+.dividend-col{
 
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     background-image: none;
@@ -146,7 +152,7 @@ body{
     box-shadow: none;
     text-align: center;
     padding: 40px 0px;
-    color: rgb(122, 12, 46);
+  
     background-color: rgb(255, 231, 217);
 }
 .buy-col{
@@ -176,6 +182,54 @@ body{
   background-color: rgb(208, 242, 255);
  
 }
+
+.dropdown-item{
+  font-size: 0.9rem;
+}
+
+table{
+
+  border-bottom-color:grey!important;
+}
+
+table > thead{
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-image: none;
+    overflow: hidden;
+    border-radius: 16px;
+    position: relative;
+    z-index: 0;
+    box-shadow: none;
+    text-align: center;
+    padding: 40px 0px;
+    color: #eef1f0;
+    background-color: rgb(88 96 89);
+}
+table > thead > tr > th{
+  border-radius: 25px !important;
+  /* border-bottom: 5px solid #52a595!important; */
+  border-bottom: none;
+}
+
+table > tbody > tr > td{
+  border-bottom-color:grey!important;
+}
+
+.learn-block{
+  text-align: left;
+}
+/* 
+table.table-bordered{
+  border:1px solid gray;
+  margin-top:20px;
+}
+table.table-bordered > thead > tr > th{
+  border:1px solid rgb(226, 226, 240);
+}
+table.table-bordered > tbody > tr > td{
+  border:1px solid rgb(230, 230, 242);
+} */
+
 @media screen and (max-width: 575px) {
   .nav-link{
     margin-bottom: 0%;
@@ -199,3 +253,14 @@ body{
 }
 
 }
+
+@media (min-width: 1200px) {  
+
+  
+.earn-btn{
+  margin-right: -200px;
+}
+
+    
+}
+ 

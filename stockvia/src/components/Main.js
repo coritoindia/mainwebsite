@@ -1,6 +1,9 @@
 import React,{useState, useEffect} from "react";
 import stockimg from '../assets/stockimage.svg'
 import axios from "axios";
+
+import {Link } from 'react-router-dom';
+
 export default function Main(){
 
     const [mainData, setMainData] = useState([]);
@@ -36,9 +39,9 @@ export default function Main(){
             <div class="p-2 hero-content ">
 
             <div class="row hero-row align-items-center justify-content-center  ">
-                <div class="col-sm-5 shadow hero-col align-middle dividend-col" >Dividend</div>
-                <div class="col-sm-5 shadow hero-col bonus-col"> Bonus/Split</div>
-                <div class="col-sm-5 shadow hero-col  buy-col"> Buyback/OFS</div>
+                <div class="col-sm-5 shadow hero-col align-middle stock-col" >  <Link to="/recos">Stock Recos</Link></div>
+                <div class="col-sm-5 shadow hero-col dividend-col"> <Link to="/dividend">Dividend</Link> </div>
+                <div class="col-sm-5 shadow hero-col  buy-col"> Bonus/Split</div>
                 <div class="col-sm-5 shadow hero-col ipo-col"> IPO's</div>
             </div>
          
