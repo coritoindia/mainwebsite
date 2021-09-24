@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from "react";
-import stockimg from '../assets/stockimage.svg'
+import playstore from '../assets/google-play.svg'
+import appstore from '../assets/app-store.svg'
 import axios from "axios";
 
 import {Link } from 'react-router-dom';
@@ -20,10 +21,15 @@ export default function Premium(){
     return (
         <div className="container my-5">
           <h3>Premium Subscription</h3>
-          <p>Visit Stockvia Regularly To Get Latest Stock Market Updates.</p>
+          <p>Join Our Telegram/Whatsapp Groups for Personalised <br/> Stock Recommendations , Mutual Funds , ETFs and other Investment Tips.</p>
 
                 <div className="hero-block">    
-                  <h1>Coming Soon..</h1>
+                 
+                  <div className="app-section">
+                  <img src={playstore} alt="play store" />
+                  <img src={appstore} alt="play store" />
+                  </div>
+                  <h3>coming soon..</h3>
                 </div>
         </div>
  

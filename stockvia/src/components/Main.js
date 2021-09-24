@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from "react";
 import stockimg from '../assets/stockimage.svg'
 import axios from "axios";
-
+import '../assets/animation.css'
 import {Link } from 'react-router-dom';
 
 export default function Main(){
@@ -20,9 +20,27 @@ export default function Main(){
     return (
         <div className="container my-5">
           <h3>All in One Stop for </h3>
-          <p> Stock Market | Mutual Funds | ETF's | Crypto | Digi Gold </p>
+         {/* <p> Stock Market | Mutual Funds | ETF's | Crypto | Digi Gold  <span id="spin"></span> </p> 
+
+          <div class="service-container">
+  <div class="word w1">Stock Market</div>
+  <div class="word w2">Mutual Funds </div>
+  <div class="word w3">ETF's</div>
+  <div class="word w4">Crypto</div>
+  <div class="word w5">Digi Gold</div>
+</div> */}
 
           
+<div class="serv-container">
+<div class="word w1">Stock Market</div>
+  <div class="word w2">Mutual Funds </div>
+  <div class="word w3">ETF's</div>
+  <div class="word w4">Crypto</div>
+  <div class="word w5">Digi Gold</div>
+                      
+                    
+</div>
+                               
             <div className="hero-block">
 
             <div class="d-flex main-hero p-3">  
@@ -41,8 +59,8 @@ export default function Main(){
             <div class="row hero-row align-items-center justify-content-center  ">
                 <div class="col-sm-5 shadow hero-col align-middle stock-col" >  <Link to="/recos">Stock Recos</Link></div>
                 <div class="col-sm-5 shadow hero-col dividend-col"> <Link to="/dividend">Dividend</Link> </div>
-                <div class="col-sm-5 shadow hero-col  buy-col"> Bonus/Split</div>
-                <div class="col-sm-5 shadow hero-col ipo-col"> IPO's</div>
+                <div class="col-sm-5 shadow hero-col  buy-col">  <Link to="/bonus-split">Bonus/Split </Link></div>
+                <div class="col-sm-5 shadow hero-col ipo-col">  <Link to="/ipo">IPO's</Link></div>
             </div>
          
 

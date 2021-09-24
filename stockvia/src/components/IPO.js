@@ -4,12 +4,12 @@ import axios from "axios";
 
 import {Link } from 'react-router-dom';
 
-export default function Recos(){
+export default function IPO(){
 
     const [mainData, setMainData] = useState([]);
 
     useEffect(() => {
-        axios.get(`https://coritoindia.github.io/stockvia-data/sample2.json`)
+        axios.get(`https://coritoindia.github.io/stockvia-data/ipo.json`)
         .then(res=>{
             setMainData(res.data)
             })
@@ -19,19 +19,20 @@ export default function Recos(){
 
     return (
         <div className="container my-5">
-          <h3>Stock Recommendations</h3>
-          <p>Get highly curated stock recommendations
-by experts & top firms!</p>
+          <h3>IPO's List 2021 (Mainboard & SME IPO)</h3>
+          <p>Visit Stockvia Regularly To Get Latest Updates on Upcoming IPO's in India.</p>
 
                 <div className="hero-block">    
                     <table class="table table-hover">
                                 <thead>
                                 <tr>
                                     <th>Company Name</th>
-                                    <th>Current Price</th>
-                                    <th>Target</th>
-                                    <th>Recommeded By</th>
-                                  
+                                    <th>Exchange</th>
+                                    <th>Open</th>
+                                    <th>Close</th>
+                                    <th>Lot Size</th>
+                                    <th>Issue Price</th>
+                                    <th>Issue Size</th>
                                     
                                 </tr>
                                 </thead>
@@ -42,17 +43,18 @@ by experts & top firms!</p>
                                     
                                     <tr>
                                         <td>{i.companyName}</td>
-                                        <td>{i.cmp}</td>
-                                        <td>{i.target}</td>
-                                        <td>{i.firm}</td>
-                                      
-                                        
+                                        <td>{i.exchange}</td>
+                                        <td>{i.open}</td>
+                                        <td>{i.close}</td>
+                                        <td>{i.lotsize}</td>
+                                        <td>{i.price}</td>
+                                        <td>{i.issuesize}</td>                                        
                                     </tr>
                                    
                                     
                                     )
                                     
-                                })}
+                                }) }
                                 </tbody>
                     </table> 
                 </div>

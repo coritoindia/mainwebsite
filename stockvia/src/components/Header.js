@@ -1,5 +1,5 @@
 
-import {Link } from 'react-router-dom';
+import {Link, NavLink } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../assets/logo.png'
@@ -21,21 +21,23 @@ export default function Header(){
  <div class="collapse navbar-collapse justify-content-center align-items-end m-auto mb-0" id="Navbar">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-      <Link className ="nav-link" to="/recos">Recommendations</Link>
+      <NavLink className ="nav-link" to="/recos">recommendations.</NavLink>
       </li>
       
       <li class="nav-item">
      
-        <Link className ="nav-link " to="/learn">Learn <span class="badge bg-info">New</span></Link>
+        <Link className ="nav-link " to="/learn">learn. </Link>
+        {/* <span class="badge bg-info">New</span> */}
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          More
+        <a class="nav-link " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          more.
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <Link class="dropdown-item" to="/mutual-funds">Mutual Funds</Link>
           <a class="dropdown-item" href="#">ETF's</a>
           <a class="dropdown-item" href="#">Digi Gold/SGB</a>
+          <a class="dropdown-item" href="#">PPF/NPS</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Crypto</a>
         </div>

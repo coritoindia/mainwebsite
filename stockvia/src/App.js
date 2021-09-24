@@ -1,6 +1,6 @@
 import logo from './logoBlack.png';
 
-import { BrowserRouter, Route, Switch , Link } from 'react-router-dom';
+import { HashRouter, Route, Switch , Link } from 'react-router-dom';
 
 
 import Main from './components/Main'
@@ -11,11 +11,13 @@ import Mutualfunds from './components/Mfs';
 import Learn from './components/Learn';
 import Dividend from './components/Dividend';
 import Premium from './components/Premium';
+import Bonus from './components/Bonus';
+import IPO from './components/IPO';
 
 function App() {
   return (
     <div className="App">
-    <BrowserRouter>
+    <HashRouter>
     
      <Header/>
         <Switch>
@@ -24,13 +26,13 @@ function App() {
           <Route  path ='/mutual-funds' component = {Mutualfunds} />
           <Route  path ='/learn' component = {Learn} />
           <Route  path ='/premium' component = {Premium} />
-          
+          <Route  path ='/bonus-split' component = {Bonus} />
           <Route  path ='/dividend' component = {Dividend} />
-          
+          <Route  path ='/ipo' component = {IPO} />
         </Switch>
       <Footer />
 
-    </BrowserRouter>
+    </HashRouter>
 
     </div>
   );

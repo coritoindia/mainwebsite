@@ -9,7 +9,7 @@ export default function Dividend(){
     const [mainData, setMainData] = useState([]);
 
     useEffect(() => {
-        axios.get(`https://coritoindia.github.io/stockvia/sample1.json`)
+        axios.get(`https://coritoindia.github.io/stockvia-data/sample1.json`)
         .then(res=>{
             setMainData(res.data)
             })

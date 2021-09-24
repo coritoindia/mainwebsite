@@ -4,12 +4,12 @@ import axios from "axios";
 
 import {Link } from 'react-router-dom';
 
-export default function Recos(){
+export default function Bonus(){
 
     const [mainData, setMainData] = useState([]);
 
     useEffect(() => {
-        axios.get(`https://coritoindia.github.io/stockvia-data/sample2.json`)
+        axios.get(`https://coritoindia.github.io/stockvia-data/sample1.json`)
         .then(res=>{
             setMainData(res.data)
             })
@@ -19,19 +19,18 @@ export default function Recos(){
 
     return (
         <div className="container my-5">
-          <h3>Stock Recommendations</h3>
-          <p>Get highly curated stock recommendations
-by experts & top firms!</p>
+          <h3>Bonus & Split 2021</h3>
+          <p>Visit Stockvia Regularly To Get Updates On Bonus &  Share Split Declared by Companies During the Year.</p>
 
                 <div className="hero-block">    
                     <table class="table table-hover">
                                 <thead>
                                 <tr>
                                     <th>Company Name</th>
-                                    <th>Current Price</th>
-                                    <th>Target</th>
-                                    <th>Recommeded By</th>
-                                  
+                                    <th>Announcement Date</th>
+                                    <th>Bonus Ratio Type</th>
+                                    <th>Ex-Date</th>
+                                    <th>Record Date</th>
                                     
                                 </tr>
                                 </thead>
@@ -42,10 +41,10 @@ by experts & top firms!</p>
                                     
                                     <tr>
                                         <td>{i.companyName}</td>
-                                        <td>{i.cmp}</td>
-                                        <td>{i.target}</td>
-                                        <td>{i.firm}</td>
-                                      
+                                        <td>{i.amount}</td>
+                                        <td>{i.type}</td>
+                                        <td>{i.exdate}</td>
+                                        <td>{i.record}</td>
                                         
                                     </tr>
                                    
